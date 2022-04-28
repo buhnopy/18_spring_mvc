@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mybatis Mapper 파일임을 명시하기 위한 DTD 선언문 (반드시 작성해야만한다) -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dataTransfer">
+
+</mapper>

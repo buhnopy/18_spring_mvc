@@ -8,8 +8,8 @@
 </head>
 <body>
 
-	<form action="transfer3" method="post"> 
-		<input type="hidden" name="url" value="transfer3">
+	<form action="transfer4" method="post"> 
+		<input type="hidden" name="url" value="transfer4">
 		<fieldset>
 			<legend>회원가입</legend>
 			<p> 아이디 : <input type="text" name="memberId" /></p>
@@ -28,8 +28,8 @@
 		</fieldset>	
      </form>
      
-    <p>이미 회원가입이 되어있으면 <a href="#">로그인(param)으로 이동하기</a></p>
-    <p>이미 회원가입이 되어있으면 <a href="#">로그인(path variable)으로 이동하기</a></p>
+    <p>이미 회원가입이 되어있으면 <a href="transfer5?isMember=yes&isSession=no">로그인(param)으로 이동하기</a></p>
+    <p>이미 회원가입이 되어있으면 <a href="transfer6/yes/no">로그인(path variable)으로 이동하기</a></p>
 
 </body>
 </html>

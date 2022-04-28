@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -120,16 +121,29 @@ public class ViewToController {
 	 *
 	 */
 	@RequestMapping(value="/transfer4" , method=RequestMethod.POST)
-	public String transfer4() {
+	public String transfer4(@RequestParam(name="memberName" , defaultValue="anonymous") String memberName,
+							@RequestParam(name="regidence" , defaultValue="서울") String regidence) {
+	
+	//public String transfer4(String memberName, String regidence) {
+		
+		System.out.println("\n transfer4 \n");
+		System.out.println("memberName : " + memberName);
+		System.out.println("regidence : " + regidence);
+		System.out.println();
 		return "home";
 	}
-	@RequestMapping(value="/transfer5" , method=RequestMethod.POST)
-	public String transfer5() {
+	
+	@RequestMapping(value="/transfer5" , method=RequestMethod.GET)
+	public String transfer5(@RequestParam("isMember") String isMember,
+							@RequestParam("isSession") String isSession) {
+		
+		System.out.println("\n transfer5 \n");
+		System.out.println("memberName : " + isMember);
+		System.out.println("regidence : " + isSession);
+		System.out.println();
+		
 		return "home";
-	}
-	@RequestMapping(value="/transfer6" , method=RequestMethod.POST)
-	public String transfer6() {
-		return "home";
+		
 	}
 	/*
 	 *  
@@ -146,7 +160,17 @@ public class ViewToController {
 	 *  
 	 * */
 
-	
+	@RequestMapping(value="/transfer6/{isMember}/{isSession}" , method=RequestMethod.GET)
+	public String transfer6(@PathVariable String isMember , 
+							@PathVariable String isSession) {
+		
+		System.out.println("\n transfer6 \n");
+		System.out.println("memberName : " + isMember);
+		System.out.println("regidence : " + isSession);
+		System.out.println();
+		
+		return "home";
+	}
 	
 	
 }
